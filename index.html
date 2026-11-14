@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Universe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-wrap">
+        <a href="#" class="brand">RANDOM<span>LAB</span></a>
+        <nav class="nav-links">
+          <a href="#about">Tentang</a>
+          <a href="#ideas">Ide</a>
+          <a href="#quote">Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="badge">Website bebas random</div>
+            <h1>Jangan <span>bosan</span>, hidup itu random.</h1>
+            <p class="lead">
+              Mau liburan, nyoba kuliner, main game, atau bikin proyek absurd? Di sini semua bisa jadi ide seru.
+              Yang penting, jangan takut untuk mencoba sesuatu yang nggak biasa.
+            </p>
+
+            <div class="cta-row">
+              <button class="button primary" onclick="showRandomIdea()">Coba ide random</button>
+              <a href="#ideas" class="button secondary">Lihat inspirasi</a>
+            </div>
+
+            <div class="mini-stats">
+              <div>
+                <strong>24/7</strong>
+                Mood random
+              </div>
+              <div>
+                <strong>∞</strong>
+                Ide liar
+              </div>
+              <div>
+                <strong>1</strong>
+                Hari baru
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="pixel-box">
+              <div>
+                <span class="mini-label">Randomizer</span>
+                <div id="random-box" class="random-box">
+                  Klik tombol di kiri untuk menemukan ide paling gila hari ini.
+                </div>
+              </div>
+
+              <div>
+                <div class="mini-label">Status</div>
+                <h3 style="margin: 0.8rem 0 0; font-size: 1.8rem;">Semangat aja dulu</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>Kenapa website ini ada?</h2>
+          <p class="section-intro">
+            Karena hidup itu bukan cuma kerja dan deadline. Kadang orang butuh sesuatu yang ringan, absurd, dan bikin senyum.
+            Website ini sengaja dibuat “bebas” supaya terasa santai, random, dan enggak terlalu serius.
+          </p>
+
+          <div class="card-grid" id="ideas">
+            <article class="card">
+              <div class="icon">🍜</div>
+              <h3>Makan random</h3>
+              <p>Pesan menu yang paling tidak pernah kamu pilih, lalu nikmati kejutan rasa baru.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon">🎧</div>
+              <h3>Playlist chaos</h3>
+              <p>Putar lagu acak dari genre yang biasanya nggak kamu dengar. Biar hidup lebih berwarna.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon">🧭</div>
+              <h3>Jalan tanpa rencana</h3>
+              <p>Ambil motor atau jalan kaki ke arah yang belum pernah kamu tuju. Siapa tahu ketemu hal baru.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote" id="quote">
+        <div class="container">
+          <div class="quote-box">
+            <p>“Hidup itu seperti randomizer: kadang gagal, kadang nyangkut, tapi selalu ada hal baru yang bisa bikin kita belajar.”</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">Dibuat dengan rasa santai dan sedikit chaos — 2026</div>
+    </footer>
+
+    <script>
+      const ideas = [
+        "Bikin kopi sambil denger podcast yang lama nggak kamu dengar.",
+        "Nyalakan playlist acak, lalu pilih satu lagu yang bikin kamu ngerasa keren.",
+        "Jalan kaki 20 menit tanpa tujuan, lalu cari tempat baru yang belum pernah kamu datangi.",
+        "Buat satu proyek kecil yang absurd tapi menyenangkan, misalnya website lucu untuk diri sendiri.",
+        "Coba masak makanan yang paling nggak masuk akal, tapi enak di lidah.",
+        "Main game yang dulu sering kamu suka saat kecil sambil nginget masa lalu.",
+        "Tulis 5 hal yang pengin kamu coba sebelum umur 30. Lalu mulai satu hari ini.",
+        "Bangun pagi tanpa alarm, lalu lakukan hal paling random tapi menenangkan.",
+        "Buat catatan kecil: 'Hari ini aku mau bahagia dengan cara yang sederhana'."
+      ];
+
+      function showRandomIdea() {
+        const box = document.getElementById("random-box");
+        const randomIndex = Math.floor(Math.random() * ideas.length);
+        box.textContent = ideas[randomIndex];
+      }
+    </script>
+  </body>
+</html>
